@@ -1,0 +1,125 @@
+.app-container {
+  background: #fff3b0; /* Nền vàng */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.li-xi {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #d32f2f; /* Màu đỏ bao lì xì */
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+
+.li-xi:hover {
+  transform: translateY(-5px) rotate(-2deg);
+}
+
+.li-xi-gold-band {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60px;
+  background: #ffd700;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.li-xi-text {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.content-container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.app-title {
+  color: #d32f2f;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.app-content {
+  color: #4e342e;
+  line-height: 1.8;
+}
+
+.fireworks-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.app-list {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.app-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.app-list li::before {
+  content: "🌸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+.app-button-container {
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.app-button {
+  padding: 12px 24px;
+  background-color: #ffeb3b;
+  color: #d32f2f;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app-button:hover {
+  background-color: #fbc02d;
+  transform: scale(1.05);
+}
