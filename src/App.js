@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import Fireworks from "fireworks-js";
+import qrImage from "./assets/qr.jpg"; // Thêm import hình QR
 import "./App.css";
 
 const Button = ({ children, className, ...props }) => (
@@ -56,7 +57,7 @@ const LunarNewYearWishes = () => {
     fireworksInstance.start();
     setFireworks(fireworksInstance);
 
-    setTimeout(() => fireworksInstance.stop(), 5000);
+    setTimeout(() => fireworksInstance.stop(), 10000);
   };
 
   return (
@@ -64,16 +65,19 @@ const LunarNewYearWishes = () => {
       <div id="fireworks-container" className="fireworks-overlay"></div>
       {isConfettiActive && <Confetti width={width} height={height} numberOfPieces={500} recycle={false} />}
 
-      <motion.div 
-        className="li-xi"
-        onClick={handleOpen}
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        <div className="li-xi-gold-band"></div>
-        <div className="li-xi-text">Ấn để mở lì xì</div>
-      </motion.div>
+      {!isOpen && (
+        <motion.div 
+          className="li-xi"
+          onClick={handleOpen}
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <div className="li-xi-gold-band"></div>
+          <div className="li-xi-text">Ấn để mở lì xì</div>
+        </motion.div>
+      )}
+
 
       <AnimatePresence>
         {isOpen && (
@@ -86,28 +90,34 @@ const LunarNewYearWishes = () => {
             <h1 className="app-title">Chúc Mừng Năm Mới</h1>
             <div className="app-content">
               <p>
-                Kính gửi ba mẹ yêu quý,
+                Kính gửi những người thân yêu,
               </p>
               <p>
-                Năm mới đã đến, con xin gửi đến ba mẹ những lời chúc chân thành nhất. Chúc ba mẹ một năm mới tràn đầy sức khỏe, hạnh phúc và bình an. Mong rằng mỗi ngày qua đi, ba mẹ luôn được sống trong niềm vui và sự ấm áp của gia đình.
+                Năm mới đã đến, xin gửi đến mọi người những lời chúc chân thành nhất. Chúc một năm mới tràn đầy sức khỏe, hạnh phúc và bình an. Mong rằng mỗi ngày qua đi đều mang đến những niềm vui và may mắn mới.
               </p>
               <p>
-                <strong>Con chúc ba mẹ năm 2025:</strong>
+                <strong>Chúc mừng năm mới 2025:</strong>
                 <ul className="app-list">
-                  <li>Dồi dào sức khỏe, tràn đầy năng lượng để cùng nhau tận hưởng cuộc sống.</li>
-                  <li>Luôn bên nhau, chia sẻ những khoảnh khắc đẹp và ý nghĩa.</li>
-                  <li>Gặp nhiều may mắn và thành công trong mọi việc.</li>
-                  <li>Mãi là điểm tựa vững chắc và nguồn động viên lớn lao cho con và cả gia đình.</li>
+                  <li>Sức khỏe dồi dào, năng lượng tràn đầy</li>
+                  <li>Thành công rực rỡ, may mắn ngập tràn</li>
+                  <li>Hạnh phúc sum vầy, ấm áp yêu thương</li>
+                  <li>An khang thịnh vượng, phúc lộc đong đầy</li>
                 </ul>
               </p>
               <p>
-                Con cảm ơn ba mẹ vì tất cả những hy sinh và tình yêu thương vô bờ bến mà ba mẹ đã dành cho con. Con mong rằng năm mới sẽ mang đến nhiều niềm vui và hạnh phúc cho ba mẹ, để chúng ta cùng nhau tạo nên những kỷ niệm đẹp đẽ hơn nữa.
-              </p>
-              <p>
                 <em>
-                  Chúc ba mẹ luôn mạnh khỏe, vui vẻ và hạnh phúc bên nhau. Con yêu ba mẹ nhiều!
+                  Chúc cả gia đình một năm mới vạn sự như ý, tấn tài tấn lộc, 
+                  cùng nhau đón những điều tốt đẹp nhất!
                 </em>
               </p>
+              <div className="qr-section">
+                <img 
+                  src={qrImage} 
+                  alt="QR Code Lì Xì" 
+                  className="qr-image"
+                />
+                <p className="qr-caption">Quét QR code nhận thật nhiều may mắn nè!</p>
+              </div>
             </div>
           </motion.div>
         )}
@@ -116,7 +126,7 @@ const LunarNewYearWishes = () => {
           whileHover={{ scale: 1.1 }}
         >
           <Button className="app-button" onClick={activateEffects}>
-            Đón Năm Mới!
+            Chúc Mừng Năm Mới 2025!
           </Button>
         </motion.div>
       </AnimatePresence>
