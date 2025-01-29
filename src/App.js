@@ -85,51 +85,40 @@ const LunarNewYearWishes = () => {
           >
             <h1 className="app-title">Chúc Mừng Năm Mới</h1>
             <div className="app-content">
-            <p>
-          Khi thanh xuân căng tràn nhựa sống, anh mong em hãy cứ là chính mình –
-          một bầu trời riêng biệt giữa vũ trụ bao la. Em như cánh én mang theo
-          nắng ấm, chạm đến đâu, đất trời bừng tỉnh, yêu thương nở rộ. Đừng
-          ngần ngại tỏa sáng theo cách riêng mình, bởi vẻ đẹp em mang là món quà
-          vô giá từ tạo hóa.
-        </p>
-        <p>
-          <strong>Anh chúc em năm 2025:</strong>
-          <ul className="app-list">
-            <li>Dẫu đường đi có gập ghềnh, bàn chân em bước tới – đá hóa thành thảm lụa mềm.</li>
-            <li>Mỗi thử thách hóa bậc thang nâng em lên tầm cao mới.</li>
-            <li>Mỗi giọt mồ hôi thắp lên ngọn đuốc kiên cường trong tim.</li>
-            <li>Dẫu giông tố có ập đến, em vẫn ung dung như cây tùng đứng giữa trời, rễ bám sâu vào hiện tại, cành vươn về phía bình minh.</li>
-          </ul>
-        </p>
-        <p>
-          Hãy để trái tim em là la bàn dẫn lối, đam mê làm ngọn hải đăng, nghị
-          lực trở thành đôi cánh. Mỗi ngày qua không chỉ là tồn tại, mà là hành
-          trình em tự viết nên truyền thuyết riêng.
-        </p>
-        <p>
-          <em>
-            Hạnh phúc không ở đâu xa – nó ẩn trong nụ cười em rạng rỡ, trong
-            từng khoảnh khắc em dám yêu thương, dám sống trọn, dám tin vào ngày
-            mai.
-          </em>
-        </p>
-        <p>
-          Anh nguyện là bến đỗ bình yên khi em mỏi gối, là vầng trăng dịu dàng
-          soi sáng những đêm dài em lạc lối. Cứ bay đi, cô gái của bầu trời tự
-          do, 2025 sẽ là chương mới trong hành trình em tự do tỏa sáng!
-        </p>
+              <p>
+                Kính gửi ba mẹ yêu quý,
+              </p>
+              <p>
+                Năm mới đã đến, con xin gửi đến ba mẹ những lời chúc chân thành nhất. Chúc ba mẹ một năm mới tràn đầy sức khỏe, hạnh phúc và bình an. Mong rằng mỗi ngày qua đi, ba mẹ luôn được sống trong niềm vui và sự ấm áp của gia đình.
+              </p>
+              <p>
+                <strong>Con chúc ba mẹ năm 2025:</strong>
+                <ul className="app-list">
+                  <li>Dồi dào sức khỏe, tràn đầy năng lượng để cùng nhau tận hưởng cuộc sống.</li>
+                  <li>Luôn bên nhau, chia sẻ những khoảnh khắc đẹp và ý nghĩa.</li>
+                  <li>Gặp nhiều may mắn và thành công trong mọi việc.</li>
+                  <li>Mãi là điểm tựa vững chắc và nguồn động viên lớn lao cho con và cả gia đình.</li>
+                </ul>
+              </p>
+              <p>
+                Con cảm ơn ba mẹ vì tất cả những hy sinh và tình yêu thương vô bờ bến mà ba mẹ đã dành cho con. Con mong rằng năm mới sẽ mang đến nhiều niềm vui và hạnh phúc cho ba mẹ, để chúng ta cùng nhau tạo nên những kỷ niệm đẹp đẽ hơn nữa.
+              </p>
+              <p>
+                <em>
+                  Chúc ba mẹ luôn mạnh khỏe, vui vẻ và hạnh phúc bên nhau. Con yêu ba mẹ nhiều!
+                </em>
+              </p>
             </div>
           </motion.div>
-          
         )}
-      <motion.div
-        className="app-button-container"
-        whileHover={{ scale: 1.1 }}
-      >
-        <Button className="app-button" onClick={activateEffects}>
-          Đón Năm Mới!
-        </Button>
-      </motion.div>
+        <motion.div
+          className="app-button-container"
+          whileHover={{ scale: 1.1 }}
+        >
+          <Button className="app-button" onClick={activateEffects}>
+            Đón Năm Mới!
+          </Button>
+        </motion.div>
       </AnimatePresence>
     </div>
   );
