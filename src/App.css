@@ -1,20 +1,22 @@
 .app-container {
-  background: #fff3b0; /* Nền vàng */
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  background: #fff3b0;
   padding: 20px;
-  position: relative;
-  overflow: hidden;
+  gap: 20px;
 }
 
 .li-xi {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 300px;
   height: 400px;
-  background: #d32f2f; /* Màu đỏ bao lì xì */
+  background: #d32f2f;
   border-radius: 15px;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -27,15 +29,14 @@
 }
 
 .li-xi-gold-band {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80%;
   height: 60px;
   background: #ffd700;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .li-xi-text {
@@ -50,20 +51,20 @@
 }
 
 .content-container {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: rgba(255, 255, 255, 0.9);
   padding: 30px;
   border-radius: 20px;
   max-width: 600px;
-  margin: 20px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.2);
 }
 
 .app-title {
   color: #d32f2f;
   font-size: 2.5em;
-  margin-bottom: 20px;
 }
 
 .app-content {
@@ -71,39 +72,29 @@
   line-height: 1.8;
 }
 
-.fireworks-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .app-list {
   list-style: none;
-  padding-left: 20px;
-  margin-top: 8px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .app-list li {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .app-list li::before {
   content: "🌸";
-  position: absolute;
-  left: 0;
-  top: 0;
   font-size: 1.2rem;
 }
 
 .app-button-container {
+  display: flex;
+  justify-content: center;
   margin-top: 16px;
-  position: relative;
-  z-index: 1;
 }
 
 .app-button {
@@ -125,19 +116,20 @@
 }
 
 .qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 2rem;
-  padding: 1rem;
   background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
   border-radius: 15px;
 }
 
 .qr-image {
-  width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
 }
 
 .qr-caption {
@@ -145,4 +137,13 @@
   font-weight: bold;
   margin-top: 1rem;
   font-size: 1.1em;
+}
+
+.fireworks-overlay {
+  position: absolute; /* Giữ nguyên vị trí, không đẩy nội dung xuống */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
