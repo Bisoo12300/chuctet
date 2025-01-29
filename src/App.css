@@ -123,3 +123,26 @@
   background-color: #fbc02d;
   transform: scale(1.05);
 }
+
+.qr-section {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+}
+
+.qr-image {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.qr-caption {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.1em;
+}
